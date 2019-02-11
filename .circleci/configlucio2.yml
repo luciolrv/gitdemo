@@ -35,15 +35,15 @@ jobs:
         
       # run tests!
       - run: yarn ng build --prod
-      - run: yarn ng test --watch=false
+      - run: yarn ng test --single-run
 
       - run:
           command: |
-            docker build -t editora.azurecr.io/hello:1.0 .
+            docker build -t sicotin.azurecr.io/hello:1.0 .
       - run:
           command: |
-            docker login --username $DOCKER_USER --password $DOCKER_PASS editora.azurecr.io
+            docker login --username $DOCKER_USER --password $DOCKER_PASS sicotin.azurecr.io
       - run:
           command: |
-            docker push editora.azurecr.io/hello:1.0
+            docker push sicotin.azurecr.io/hello:1.0
 
