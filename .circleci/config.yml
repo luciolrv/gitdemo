@@ -12,10 +12,10 @@ jobs:
       - image: circleci/node:8-browsers
       
       # setup the remote docker in CircleCI
-      - setup_remote_docker
+       #- setup_remote_docker
 
       #download and cache dependencies
-      - restore_cache
+      #- restore_cache
       
       
       # Specify service dependencies here if necessary
