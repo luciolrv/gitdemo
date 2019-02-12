@@ -39,11 +39,11 @@ jobs:
 
       - run:
           command: |
-            docker build -t editora.azurecr.io/hello:1.0 .
+            docker build -t editora.azurecr.io/gitdemo:1.0 .
       - run:
           command: |
             docker login --username $DOCKER_USER --password $DOCKER_PASS editora.azurecr.io
       - run:
           command: |
-            docker push editora.azurecr.io/hello:1.0
+            docker push editora.azurecr.io/gitdemo:1.0
 
