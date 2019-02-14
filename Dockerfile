@@ -1,4 +1,5 @@
-FROM nginx:alpine
+FROM nginx:1.13.3-alpine
+
 LABEL author="Lucio Rodriguez"
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
